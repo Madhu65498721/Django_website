@@ -20,7 +20,7 @@ from app.views import index,contact_form,blog_detail,blogs
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/', index,name="home"),
+    path('', index,name="home"),
     path('contact/', contact_form ,name="contact_form"),
     path('blog_detail/<blog_id>',blog_detail,name='blog_detail'),
     path('blogs/',blogs,name="blogs"),
