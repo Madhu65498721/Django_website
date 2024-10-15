@@ -52,15 +52,17 @@ The website is live and can be accessed here: [Live Site](https://madhu5432.pyth
 
    python manage.py runserver
 
-To configure email functionality, create a .env file in the root directory with the following environment variables:
-            EMAIL_HOST_USER=<your-email>
-            EMAIL_HOST_PASSWORD=<your-password>
+To configure email functionality, create a `.env` file in the root directory with the following environment variables:
 
-Email Configuration
-Ensure to configure the email settings in settings.py with your SMTP details.
-          EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-          EMAIL_HOST = 'smtp.gmail.com'
-          EMAIL_PORT = 587
-          EMAIL_USE_TLS = True
-          EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-          EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
+### Email Configuration
+
+Ensure to configure the email settings in `settings.py` with your SMTP details:
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
