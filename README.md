@@ -34,30 +34,54 @@ The website is live and can be accessed here: [Live Site](https://madhu5432.pyth
 
 1. Clone the repository:
 
+   ```bash
    git clone https://github.com/your-username/your-repo.git
-   
-2. Navigate to the project directory
+   ```
 
-    cd your-repo
+2. Navigate to the project directory:
+
+   ```bash
+   cd your-repo
+   ```
 
 3. Install the required dependencies:
 
-    pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. Apply migrations:
 
-    python manage.py migrate
+   ```bash
+   python manage.py migrate
+   ```
 
 5. Run the development server:
 
+   ```bash
    python manage.py runserver
+   ```
+
+6. Access the website at `http://127.0.0.1:8000`.
+
+### Environment Variables
 
 To configure email functionality, create a `.env` file in the root directory with the following environment variables:
 
+```
+EMAIL_HOST_USER=<your-email>
+EMAIL_HOST_PASSWORD=<your-password>
+```
 
-### Email Configuration
+## Usage
 
-Ensure to configure the email settings in `settings.py` with your SMTP details:
+- **Home Page**: Displays company information and latest blogs.
+- **Contact Page**: Users can submit queries that will be logged and emailed.
+- **Blogs**: Users can view blog posts and their details.
+
+## Email Configuration
+
+Ensure to configure the email settings in `settings.py` with your SMTP details.
 
 ```python
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -66,6 +90,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-
-
-
+```
